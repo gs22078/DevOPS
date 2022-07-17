@@ -16,7 +16,7 @@
 \RequirePackage{mathpazo}            % Use the Palatino font by default
 \RequirePackage[english]{babel}      % Load babel if you're unsure about the default language - mostly to be safe
 \RequirePackage{xcolor}              % For named colors
-\RequirePackage{eso-pic}                 % required to place huge uni logo at the back - on title page
+\RequirePackage{eso-pic}             % required to place huge uni logo at the back - on title page
 \RequirePackage[pdftex]{graphicx}    % For pictures
 \RequirePackage{amssymb}             % At least, for black squares in bullet list
 \RequirePackage[pdfusetitle, colorlinks = true,
@@ -27,8 +27,8 @@
 \RequirePackage[authoryear,semicolon,sort]{natbib} % for (Ebejer, 2012; Alba, 2013) kind of references; removed 'square' option after viva examination comments
 
 \RequirePackage{longtable}           % For very long tables
-\RequirePackage{pdflscape}			 % For landscape tables (instead of portrait)
-\usepackage[defaultsans]{lato}		 % Sans font to use
+\RequirePackage{pdflscape}			     % For landscape tables (instead of portrait)
+\usepackage[defaultsans]{lato}		   % Sans font to use
 \usepackage[printonlyused,withpage]{acronym}
 \usepackage{lipsum} % dummy text
 \usepackage{float} % dummy text
@@ -270,37 +270,43 @@
 \textbf{(b) 사용 신청}\\
 
 연구용 서버의 GPU를 사용하지 않는 경우 별도의 사용 신청이 필요하지 않다. 서버의 GPU를 사용하고자 하는 학생은 반드시 송죽학사를 통해 미리 신청해야 한다. 신청하고 승인받은 이후 사용하고자 할 때는 반드시 정해진 GPU를 정해진 기한 동안만 사용해야 한다.\\
+2022년, 현재는 GPU를 사용할 때에도 별도의 신청 절차 없이, 다른 사람이 사용 중인지 확인한 뒤 사용할 수 있다.\\
 
 \textbf{(c) 관리}\\
 
 연구용 서버는 GM 봉사모둠이 관리한다. 또한, GM 봉사모둠원만이 관리자 계정을 가질 수 있으며 root 계정의 비밀번호는 각 기수의 관리자가 관리한다. \\
+2022년, 현재는 GM 봉사모둠이 없어졌으며, DevOPS 자율동아리에서 서버를 관리한다.\\
 
 \textbf{(d) 현재 서버 정보}}\\
 
 %%\newcolumntype{L}{>{\arraybackslash}m{2.5in}}
 \bgroup
 \def\arraystretch{1.2}%
-\begin{tabular}{|l|l}
-{\bfseries OS} & {Ubuntu 20.04.2 LTS} \\
-{\bfseries CPU} & {Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz $\times$ 40} \\
-{\bfseries GPU} & {Nvidia Tesla K40c $\times$ 6} \\
-{\bfseries IP} & {115.23.235.135} \\
-{\bfseries SSH Port} & {-----} \\
-{\bfseries Location} & {SRC 720} \\
-{\bfseries Admin} & {20059 송혁중} \\
-{\bfseries As of} & {2021.5.11.} \\
-\end{tabular}\\
-\begin{tabular}{|l|l}
-{\bfseries OS} & {Ubuntu 20.04.2 LTS} \\
-{\bfseries CPU} & {Intel Xeon Silver 44310 Processor (2.1GHz 12Core)  $\times$ 2} \\
-{\bfseries GPU} & {Nvidia Qudro RTX A6000 48GB $\times$ 10} \\
-{\bfseries IP} & {115.23.235.150} \\
-{\bfseries SSH Port} & {-----} \\
-{\bfseries Location} & {SRC 720} \\
-{\bfseries Admin} & {20059 송혁중} \\
-{\bfseries As of} & {2022.5.2.} \\
-\end{tabular}\\
+\noindent\begin{table}[htbp]
+\begin{tabular}{|>{\bfseries\arraybackslash}l|l}
+{OS} & {Ubuntu 20.04.2 LTS} \\
+{CPU} & {Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz $\times$ 40} \\
+{GPU} & {Nvidia Tesla K40c $\times$ 6} \\
+{IP} & {115.23.235.135} \\
+{SSH Port} & {-----} \\
+{Location} & {SRC 720} \\
+{Admin} & {20059 송혁중} \\
+{As of} & {2021.5.11.} \\
+\end{tabular}
+\caption{헌재 연구용 메인서버 정보}
+\begin{tabular}{|>{\bfseries\arraybackslash}l|l}
+{OS} & {Ubuntu 20.04.2 LTS} \\
+{CPU} & {Intel Xeon Silver 44310 Processor (2.1GHz 12Core)  $\times$ 2} \\
+{GPU} & {Nvidia Qudro RTX A6000 48GB $\times$ 10} \\
+{IP} & {115.23.235.150} \\
+{SSH Port} & {-----} \\
+{Location} & {SRC 720} \\
+{Admin} & {20059 송혁중} \\
+{As of} & {2022.5.2.} \\
+\end{tabular}
+\caption{현재 테스트용 서버 정보}
 이외 egpu 및 데스크탑 사용은 정보과 선생님께 문의
+\end{table}\\
 \egroup
 \if@openright\cleardoublepage\else\clearpage\fi}
 
